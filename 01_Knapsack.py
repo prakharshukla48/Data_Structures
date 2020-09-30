@@ -1,3 +1,4 @@
+#greedy approach for the knapsack problem
 t = int(input())
 
 while (t > 0):
@@ -6,12 +7,14 @@ while (t > 0):
     S = K[0]
     weights = []
     values = []
+    # loop to insert the weights and values in the respective lists
     for z in range(N):
         l = list(map(int, input().strip().split()))
         weights.append(l[0])
         values.append(l[1])
     
     a = [[0]*(S+1) for q in range(N+1)]
+    # loop to maximise weights according to the values
     for i in range(1, N+1):
         for j in range(1, S+1):
             if (weights[i-1] > j):
