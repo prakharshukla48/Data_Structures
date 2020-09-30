@@ -1,9 +1,11 @@
+# Creating the base class
 class Node:
     def __init__(self, val):
         self.data = val
         self.left = None
         self.right = None
-
+        
+   # Function for the preorder Travesrsal of a tree
     def PreorderTraversal(self, root):
         res = []
         if root:
@@ -22,7 +24,7 @@ def precedence(ch):
     else:
         prec = 10
     return prec
-
+# main function
 def _main(exp):
     prec = 8
     
